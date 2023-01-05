@@ -5,7 +5,7 @@ import {SiInstagram} from 'react-icons/si';
 export default function Contact() {
     return (
         <>
-        <div id='contact' style={{ height: 60 + 'vh' }} className="font-sans w-screen p-20 bg-black grid grid-cols-4 gap-32 place-items-start">
+        <div id='contact' style={{ height: 60 + 'vh' }} className="max-sm:hidden font-sans w-screen p-20 bg-black grid grid-cols-4 gap-32 place-items-start">
             <div className="flex flex-col justify-start">
                 <span className="text-white text-6xl">
                     <img className="inline-block" src="/Assets/Images/palm.png" height={100} width={100} alt="palm" />|
@@ -38,7 +38,7 @@ export default function Contact() {
                 </ul>
             </div>
         </div>
-        <div className="flex flex-col font-sans bg-black w-screen justify-center items-center">
+        <div className="max-sm:p-10 flex flex-col font-sans bg-black w-screen justify-center items-center">
             <p className="text-white mb-5 text-xl">Have a query? <a className="p-2 ml-4 bg-ambers rounded cursor-pointer" href="mailto:">Send Mail</a></p>
             <p className="text-white text-center">© 2021 Palm Tree Club. All rights reserved.</p>
         </div>

@@ -7,6 +7,7 @@ import Events from "../src/components/Events";
 import Contact from "../src/components/Contact";
 
 export default function Home() {
+
   return (
     <>
       <Head>
