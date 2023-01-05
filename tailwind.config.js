@@ -16,7 +16,9 @@ module.exports = {
         'hero': "url('/Assets/Images/heroop.png')",
       },
       colors: {
-        'ambers' : '#e53170'
+        'ambers' : '#e53170',
+        'bottle' : '#004643',
+        'bottle-text' : '#fffffe',
       }
     },
   },

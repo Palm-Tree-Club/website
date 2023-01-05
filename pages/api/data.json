@@ -20,5 +20,19 @@
             "description" : "Keep eveyone in check & track",
             "src" : "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-mentorship-marketing-agency-flaticons-lineal-color-flat-icons-4.png"
         }
+    ],
+    "achivements" : [
+        {
+            "name" : "GDSC",
+            "description" : "Google Developer Student Club",
+            "src" : "/Assets/Images/googledev.svg",
+            "link" : "https://gdsc.community.dev/silver-oak-university-ahmedabad/"
+        },
+        {
+            "name" : "ReSkill",
+            "description" : "ReSkill India",
+            "src" : "/Assets/Images/reskill.svg",
+            "link" : "https://reskilll.com/"
+        }
     ]
 }

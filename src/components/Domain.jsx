@@ -9,13 +9,12 @@ export default function Domain() {
       .then((response) => response.json())
       .then((json) => {
         setDomain(json.jsonData.domains);
-        console.log(json.jsonData.domains);
       });
   }, []);
   return (
     <div id="domain" className="flex flex-col justify-center items-center h-screen bg-slate-900 w-screen">
       <div className="flex justify-center items-center">
-        <h1 className="m-20 font-semibold text-white text-6xl ">
+        <h1 className="m-20 font-semibold text-ambers text-6xl ">
           Find People Of Your Interest!
         </h1>
       </div>
@@ -29,7 +28,7 @@ export default function Domain() {
             >
               <div className="flex flex-col justify-around items-center h-full hover:bg-sky-700 transition ease-in-out duration-300">
                 <img src={item.src} height={48} width={48} alt={item.name}/>
-                <h1 className="text-2xl uppercase font-semibold text-white">
+                <h1 className="text-2xl uppercase font-semibold text-ambers">
                   {item.name}
                 </h1>
               </div>
