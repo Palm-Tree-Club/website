@@ -1,0 +1,24 @@
+{
+    "domains" : [
+        {
+            "name" : "Management",
+            "description" : "Handle all the events and manage the cycle",
+            "src" : "https://img.icons8.com/fluency/48/null/commercial-development-management.png"
+        },
+        {
+            "name" : "Development",
+            "description" : "Handle all the technical aspects of the community",
+            "src" : "https://img.icons8.com/fluency/48/null/imac-settings.png"
+        },
+        {
+            "name" : "Desginers",
+            "description" : "Showcase your design skills",
+            "src" : "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-designer-computer-programming-flaticons-lineal-color-flat-icons.png"
+        },
+        {
+            "name" : "Mentors",
+            "description" : "Keep eveyone in check & track",
+            "src" : "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-mentorship-marketing-agency-flaticons-lineal-color-flat-icons-4.png"
+        }
+    ]
+}
