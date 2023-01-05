@@ -13,7 +13,7 @@ export default function Home() {
         <title>Palm Tree Club</title>
         <meta name="description" content="Palm Tree Club is offical club of SOCCA - Silver Oak University" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Assets/Images/palm.png" />
       </Head>
       <Navbar />
       <main style={{minHeight: 100+'vh'}} className='flex flex-col justify-center items-center overflow-hidden'>
