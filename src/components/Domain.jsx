@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function Domain() {
   const [domain, setDomain] = useState([]);
   useEffect(() => {
-    fetch("/api/hello")
+    fetch("/data.json")
       .then((response) => response.json())
       .then((json) => {
-        setDomain(json.jsonData.domains);
+        setDomain(json.domains);
       });
   }, []);
   return (
