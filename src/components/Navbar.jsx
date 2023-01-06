@@ -15,7 +15,10 @@ export default function Navbar() {
                 <Link activeClass="active" to="domain" smooth={true} duration={300} className="max-sm:mr-3 mr-10 cursor-pointer hover:text-sky-700 transition duration-300">Domains</Link>
                 <Link activeClass="active" to="achivements" smooth={true} duration={300} className="max-sm:mr-3 mr-10 cursor-pointer hover:text-sky-700 transition duration-300">Achievements</Link>
                 <Link activeClass="active" to="events" smooth={true} duration={300} className="max-sm:mr-3 mr-10 cursor-pointer hover:text-sky-700 transition duration-300">Events</Link>
-                <Link activeClass="active" to="contact" smooth={true} duration={300} className="cursor-pointer hover:text-sky-700 transition duration-300">Contact</Link>
+                <Link activeClass="active" to="contact" smooth={true} duration={300} className="max-sm:mr-3 mr-10 cursor-pointer hover:text-sky-700 transition duration-300">Contact</Link>
+                <a className="text-ambers cursor-pointer hover:text-sky-700 transition duration-300" onClick={() => {
+                    router.push('/login');
+                }}>Login</a>
             </ul>
         </nav>
     )

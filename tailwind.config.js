@@ -19,6 +19,7 @@ module.exports = {
         'ambers' : '#e53170',
         'bottle' : '#004643',
         'bottle-text' : '#fffffe',
+        'opacity' : 'rgba(0, 0, 0, 0.612)',
       }
     },
   },
