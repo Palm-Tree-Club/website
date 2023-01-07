@@ -138,9 +138,9 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-        ): <div className="h-screen w-screen flex flex-col justify-center items-center">
+        ): <div className="h-screen w-screen flex flex-col justify-evenly items-center">
             <img src='/Assets/Images/palm.png' height={200} width={200} alt='Loading'/>
-            <h1 className='text-4xl text-white'>Loading...</h1>
+            <h1 className='text-4xl text-black'>Loading...</h1>
           </div>}
     </div>
   );
