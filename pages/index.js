@@ -8,16 +8,10 @@ import Contact from "../src/components/Contact";
 import { useEffect } from "react";
 import firebase from "../src/services/firebase";
 import { getAnalytics, logEvent } from "firebase/analytics";
-import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 export default function Home() {
   useEffect(() => {
     const analytics = getAnalytics(firebase);
-    logEvent(analytics, "page_view");
-    const appCheck = initializeAppCheck(firebase, {
-      provider: new ReCaptchaV3Provider('6LdG1NojAAAAAGOMNdI421mGQaij8q0F68mcXsA0'),
-      isTokenAutoRefreshEnabled: true
-    });
-    appCheck;    
+    logEvent(analytics, "page_view");  
   }, []);
   return (
     <>
