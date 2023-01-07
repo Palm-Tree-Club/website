@@ -1,0 +1,35 @@
+{
+    "task": [
+        {
+            "message": "Hello World"
+        },
+        {
+            "message": "Hello World"
+        },
+        {
+            "message": "Hello World"
+        }
+    ],
+    "announcement": [
+        {
+            "message": "Hello World"
+        },
+        {
+            "message": "Hello World"
+        },
+        {
+            "message": "Hello World"
+        }
+    ],
+    "events": [
+        {
+            "message": "Hello World"
+        },
+        {
+            "message": "Hello World"
+        },
+        {
+            "message": "Hello World"
+        }
+    ]
+}
