@@ -9,12 +9,11 @@ import {
   fetchAndActivate,
   getAll,
   getRemoteConfig,
-  getValue
+  getValue,
 } from "firebase/remote-config";
 
 const auth = getAuth();
-const remoteConfig = getRemoteConfig(firebase);
-remoteConfig.settings.minimumFetchIntervalMillis = 10000;
+
 export default function Dashboard() {
   const [task, setTask] = useState(null);
   const [announce, setannounce] = useState(null);
@@ -26,6 +25,8 @@ export default function Dashboard() {
     }
   }, [router]);
   useEffect(() => {
+    const remoteConfig = getRemoteConfig(firebase);
+    remoteConfig.settings.minimumFetchIntervalMillis = 10000;
     fetchAndActivate(remoteConfig).then(() => {
       const testing = getAll(remoteConfig, "dashboard");
       const josn = JSON.parse(testing.dashboard._value);
@@ -95,7 +96,10 @@ export default function Dashboard() {
               </ol>
             </div>
           </div>
-          <div style={{ width: 30 + "rem" }} className="rounded-lg w-auto border-2 p-5">
+          <div
+            style={{ width: 30 + "rem" }}
+            className="rounded-lg w-auto border-2 p-5"
+          >
             <div className="flex flex-col items-start">
               <h1 className="text-4xl cursor-pointer hover:text-sky-700 transition duration-300 text-white uppercase font-semibold">
                 Announcements
