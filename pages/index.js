@@ -8,6 +8,7 @@ import Contact from "../src/components/Contact";
 import { useEffect } from "react";
 import firebase from "../src/services/firebase";
 import { getAnalytics, logEvent } from "firebase/analytics";
+import Faculty from "../src/components/Faculty";
 export default function Home() {
   useEffect(() => {
     const analytics = getAnalytics(firebase);
@@ -38,6 +39,7 @@ export default function Home() {
         <Domain />
         <Achievements />
         <Events />
+        <Faculty />
       </main>
       <footer style={{ overflow: "hidden" }}>
         <Contact />

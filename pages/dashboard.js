@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
-import { getAuth } from "firebase/auth";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import firebase from "../src/services/firebase";
 import { useRouter } from "next/router";
 import { BiLogOutCircle } from "react-icons/bi";
@@ -72,76 +72,87 @@ export default function Dashboard() {
             alt="silver oak university"
           />
         </a>
-        <a className="absolute right-2 text-white max-sm:mr-3 cursor-pointer hover:text-sky-700 transition duration-300">
+        <a onClick={() => {
+          sendPasswordResetEmail(auth, auth.currentUser.email).then(() => {
+            alert("Password reset link has been sent to your email");
+          });
+        }} className="absolute right-2 text-white max-sm:mr-3 cursor-pointer hover:text-sky-700 transition duration-300">
           {auth.currentUser?.email}{" "}
         </a>
       </nav>
       {task != null && announce != null && events != null ? (
-      <div className="h-screen w-screen flex flex-col justify-start items-center bg-grayish">
-        <div className="mt-40 grid grid-cols-3 gap-10">
-          <div className="rounded-lg w-auto border-2 p-5">
-            <div className="flex flex-col items-start">
-              <h1 className="text-4xl cursor-pointer hover:text-sky-700 transition duration-300 text-white uppercase font-semibold">
-                Task
-              </h1>
-              <ol className="mt-10">
-                {task != null
-                  ? task.map((item, key) => (
-                      <li className="text-white" key={key}>
-                        {" "}
-                        <AiFillCaretRight className="inline-block" />{" "}
-                        {item.message}
-                      </li>
-                    ))
-                  : null}
-              </ol>
+        <div className="h-screen w-screen flex flex-col justify-start items-center bg-grayish">
+          <div className="mt-40 grid grid-cols-3 gap-10">
+            <div className="rounded-lg w-auto border-2 p-5">
+              <div className="flex flex-col items-start">
+                <h1 className="text-4xl cursor-pointer hover:text-sky-700 transition duration-300 text-white uppercase font-semibold">
+                  Task
+                </h1>
+                <ol className="mt-10">
+                  {task != null
+                    ? task.map((item, key) => (
+                        <li className="text-white" key={key}>
+                          {" "}
+                          <AiFillCaretRight className="inline-block" />{" "}
+                          {item.message}
+                        </li>
+                      ))
+                    : null}
+                </ol>
+              </div>
             </div>
-          </div>
-          <div
-            style={{ width: 30 + "rem" }}
-            className="rounded-lg w-auto border-2 p-5"
-          >
-            <div className="flex flex-col items-start">
-              <h1 className="text-4xl cursor-pointer hover:text-sky-700 transition duration-300 text-white uppercase font-semibold">
-                Announcements
-              </h1>
-              <ol className="mt-10">
-                {announce != null
-                  ? announce.map((item, key) => (
-                      <li className="text-white" key={key}>
-                        {" "}
-                        <AiFillCaretRight className="inline-block" />{" "}
-                        {item.message}
-                      </li>
-                    ))
-                  : null}
-              </ol>
+            <div
+              style={{ width: 30 + "rem" }}
+              className="rounded-lg w-auto border-2 p-5"
+            >
+              <div className="flex flex-col items-start">
+                <h1 className="text-4xl cursor-pointer hover:text-sky-700 transition duration-300 text-white uppercase font-semibold">
+                  Announcements
+                </h1>
+                <ol className="mt-10">
+                  {announce != null
+                    ? announce.map((item, key) => (
+                        <li className="text-white" key={key}>
+                          {" "}
+                          <AiFillCaretRight className="inline-block" />{" "}
+                          {item.message}
+                        </li>
+                      ))
+                    : null}
+                </ol>
+              </div>
             </div>
-          </div>
-          <div className="w-auto rounded-lg border-2 p-5">
-            <div className=" flex flex-col items-start ">
-              <h1 className="text-4xl cursor-pointer hover:text-sky-700 transition duration-300 text-white uppercase font-semibold">
-                Upcoming Events
-              </h1>
-              <ol className="mt-10">
-                {events != null
-                  ? events.map((item, key) => (
-                      <li className="text-white" key={key}>
-                        {" "}
-                        <AiFillCaretRight className="inline-block" />{" "}
-                        {item.message}
-                      </li>
-                    ))
-                  : null}
-              </ol>
+            <div className="w-auto rounded-lg border-2 p-5">
+              <div className=" flex flex-col items-start ">
+                <h1 className="text-4xl cursor-pointer hover:text-sky-700 transition duration-300 text-white uppercase font-semibold">
+                  Upcoming Events
+                </h1>
+                <ol className="mt-10">
+                  {events != null
+                    ? events.map((item, key) => (
+                        <li className="text-white" key={key}>
+                          {" "}
+                          <AiFillCaretRight className="inline-block" />{" "}
+                          {item.message}
+                        </li>
+                      ))
+                    : null}
+                </ol>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-        ): <div className="h-screen w-screen flex flex-col justify-evenly items-center">
-            <img src='/Assets/Images/palm.png' height={200} width={200} alt='Loading'/>
-            <h1 className='text-4xl text-black'>Loading...</h1>
-          </div>}
+      ) : (
+        <div className="h-screen w-screen flex flex-col justify-evenly items-center">
+          <img
+            src="/Assets/Images/palm.png"
+            height={200}
+            width={200}
+            alt="Loading"
+          />
+          <h1 className="text-4xl text-black">Loading...</h1>
+        </div>
+      )}
     </div>
   );
 }

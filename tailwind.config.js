@@ -21,6 +21,7 @@ module.exports = {
         'bottle-text' : '#fffffe',
         'opacity' : 'rgba(0, 0, 0, 0.612)',
         'grayish' : 'rgb(45, 45, 45)',
+        'purplish' : '#67568c'
       }
     },
   },

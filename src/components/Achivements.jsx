@@ -13,7 +13,7 @@ export default function Achievements() {
     }, []);
 
     return (
-        <div id="achivements" className="flex flex-col font-sans justify-center items-center h-screen bg-ambers w-screen">
+        <div id="achivements" className="select-noneselect-none flex flex-col font-sans justify-center items-center h-screen bg-ambers w-screen">
             <h1 data-aos="fade-up" className="text-white text-6xl max-sm:text-3xl">Achivements</h1>
             <div data-aos="fade-up" className="mt-32 grid gap-5 grid-flow-col place-items-center w-3/4 max-sm:grid-flow-row max-sm:mt-10">
                 {data.map((item, index) => {
