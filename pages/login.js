@@ -41,7 +41,7 @@ export default function LoginPage() {
     <div className="h-screen w-screen bg-hero bg-cover max-sm:bg-center">
       <nav className={`fixed z-30 flex p-10 justify-center max-sm:justify-center items-center w-full h-20 bg-zinc-900 font-sans font-semibold text-lg max-sm:text-sm`}>
             <a onClick={() => {
-              router.back();
+              router.push('/');
             }} className="absolute left-2 text-white max-sm:mr-3 mr-10 cursor-pointer hover:text-sky-700 transition duration-300"><HiArrowNarrowLeft className="inline-block"/> Go Back</a>
             <a className="max-sm:hidden text-cyan-50 text-2xl"><img className="inline-block cursor-pointer" onClick={() => {
                 router.reload();

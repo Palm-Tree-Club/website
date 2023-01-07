@@ -9,7 +9,6 @@ import {
   fetchAndActivate,
   getAll,
   getRemoteConfig,
-  getValue,
 } from "firebase/remote-config";
 
 const auth = getAuth();
@@ -35,6 +34,7 @@ export default function Dashboard() {
       setevents(josn.events);
     });
   }, []);
+
   return (
     <div className="h-screen w-screen ">
       <nav
@@ -76,6 +76,7 @@ export default function Dashboard() {
           {auth.currentUser?.email}{" "}
         </a>
       </nav>
+      {task != null && announce != null && events != null ? (
       <div className="h-screen w-screen flex flex-col justify-start items-center bg-grayish">
         <div className="mt-40 grid grid-cols-3 gap-10">
           <div className="rounded-lg w-auto border-2 p-5">
@@ -137,6 +138,9 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+        ): <div className="h-screen w-screen flex justify-center items-center">
+            Loading...
+          </div>}
     </div>
   );
 }
