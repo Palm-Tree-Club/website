@@ -10,7 +10,7 @@ import {
   getAll,
   getRemoteConfig,
 } from "firebase/remote-config";
-
+import { toast, ToastContainer } from "react-toastify";
 const auth = getAuth();
 
 export default function Dashboard() {
@@ -18,6 +18,20 @@ export default function Dashboard() {
   const [announce, setannounce] = useState(null);
   const [events, setevents] = useState(null);
   const router = useRouter();
+  const notify = () => {
+    toast("Password Link Sent!", {
+      hideProgressBar: false,
+      autoClose: 2000,
+      type: "success",
+    });
+  };
+  const spam = () => {
+    toast("Kindly check your spam box also!", {
+      hideProgressBar: false,
+      autoClose: 2000,
+      type: "success",
+    });
+  };
   useEffect(() => {
     if (!auth.currentUser) {
       router.push({ pathname: "/login" }, "/login");
@@ -72,14 +86,24 @@ export default function Dashboard() {
             alt="silver oak university"
           />
         </a>
-        <a onClick={() => {
-          sendPasswordResetEmail(auth, auth.currentUser.email).then(() => {
-            alert("Password reset link has been sent to your email");
-          });
-        }} className="absolute right-2 text-white max-sm:mr-3 cursor-pointer hover:text-sky-700 transition duration-300">
-          {auth.currentUser?.email}{" "}
-        </a>
+        <span className="inline-flex rounded absolute right-2 text-white max-sm:mr-3 cursor-pointertransition duration-300">
+          {auth.currentUser?.email}
+          {" | "}
+          <a
+            onClick={() => {
+              sendPasswordResetEmail(auth, auth.currentUser.email).then(() => {
+                notify();
+                spam();
+              });
+            }}
+            className="inline-flex text-white max-sm:mr-3 cursor-pointer hover:text-sky-700 transition duration-300"
+          >
+            {" "}
+            Reset Password
+          </a>
+        </span>
       </nav>
+      <ToastContainer className=" z-40" />
       {task != null && announce != null && events != null ? (
         <div className="h-screen w-screen flex flex-col justify-start items-center bg-grayish">
           <div className="mt-40 grid grid-cols-3 gap-10">
