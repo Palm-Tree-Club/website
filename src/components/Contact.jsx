@@ -11,7 +11,7 @@ export default function Contact() {
                         <img className="inline-block" src="/Assets/Images/palm.png" height={100} width={100} alt="palm" />|
                         <img className="inline-block" src="/Assets/Images/sou.png" height={100} width={100} alt="sou" />
                     </span>
-                    <p className="text-white mt-10 ">Palm Tree Club, created and mentored by Silver Oak College Of Computer Application!</p>
+                    <p className="text-white mt-10 ">Palm Tree Club, created & mentored by Silver Oak College Of Computer Application!</p>
                 </div>
                 <div className="flex flex-col justify-start">
                     <p className="text-white font-bold text-2xl uppercase">site track</p>
