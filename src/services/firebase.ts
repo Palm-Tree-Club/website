@@ -1,13 +1,13 @@
 import firebase from "firebase/compat/app";
 
 const conf = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  apiKey: "AIzaSyAk4-yfa5ll0v0PncfiV1ETbiXOKB7I3II",
+  authDomain: "palm-tree-club.firebaseapp.com",
+  projectId: "palm-tree-club",
+  storageBucket: "palm-tree-club.appspot.com",
+  messagingSenderId: "1025156690287",
+  appId: "1:1025156690287:web:76a7aa741d546a0afc789a",
+  measurementId: "G-4QMLY5KNST"
 };
 
 export default !firebase.apps.length ? firebase.initializeApp(conf) : firebase.app();

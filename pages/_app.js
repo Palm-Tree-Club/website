@@ -9,9 +9,13 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
-  return (
-    <div className={`${openSans.variable} font-sans`}>      
-      <Component {...pageProps} />
-    </div>
-  );
+
+  if (typeof window !== "undefined") {
+    return (
+      <div suppressHydrationWarning className={`${openSans.variable} font-sans`}>
+        <Component {...pageProps} />
+      </div>
+    );
+  }
+  return <div className={`${openSans.variable} font-sans`}>Loading ...</div>;
 }
