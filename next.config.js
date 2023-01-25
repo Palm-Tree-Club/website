@@ -11,6 +11,8 @@ const nextConfig = {
     REACT_APP_MEASUREMENT_ID: "G-4QMLY5KNST",
   },
   images: {
+    domains: ["firebasestorage.googleapis.com", "img.icons8.com"],
+    unoptimized: true,
     loader: "akamai",
     path: "",
   },

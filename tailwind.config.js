@@ -14,6 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero': "url('/Assets/Images/hero.jpeg')",
+        'event': "url('/Assets/Videos/event.gif')",
       },
       colors: {
         'ambers' : '#e53170',
