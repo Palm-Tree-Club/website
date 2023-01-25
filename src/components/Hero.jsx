@@ -11,7 +11,6 @@ export default function Hero() {
             className="inline-block cursor-pointer"
             src="/Assets/Images/palm.png"
             height={100}
-            loading="lazy"
             width={100}
             alt="Palm Tree Club"
           />{" "}
@@ -23,7 +22,6 @@ export default function Hero() {
             src="/Assets/Images/sou.png"
             className="inline-block cursor-pointer"
             height={150}
-            loading="lazy"
             width={150}
             alt="silver oak university"
           />

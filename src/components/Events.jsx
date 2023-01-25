@@ -8,12 +8,12 @@ export default function Events() {
                 </div>
                 <div className="flex flex-col justify-evenly h-full items-center">
                     <h1 className="text-3xl font-semibold uppercase text-bottle-text text-center">Profile Building Session - LinkedIn</h1>
-                    <p className='text-xl text-bottle-text'>
-                        <p><img className='inline-flex' alt="calender" loading='lazy' height={30} width={30} src="https://img.icons8.com/color/48/null/calendar--v3.png" /> : 28<sup>th</sup> Jan</p>
-                        <p><img alt='clock' height={30} width={30} className="inline-flex" loading='lazy' src="https://img.icons8.com/fluency/48/null/time-span.png" /> : 11:00 am - 1:30 pm</p>
+                    <div className='text-xl text-bottle-text'>
+                        <p><img className='inline-flex' alt="calender" height={30} width={30} src="https://img.icons8.com/color/48/null/calendar--v3.png" /> : 28<sup>th</sup> Jan</p>
+                        <p><img alt='clock' height={30} width={30} className="inline-flex" src="https://img.icons8.com/fluency/48/null/time-span.png" /> : 11:00 am - 1:30 pm</p>
                         <p className='mb-10'><img alt='location' height={30} width={30} className="inline-flex" src="https://img.icons8.com/office/40/null/place-marker--v1.png" /> : CV Raman Hall - B Block</p>
                         <a className='bg-amber-400 p-3 rounded-xl text-xl font-semibold active:bg-transparent transition-all duration-300 active:text-bottle-text active:scale-90 cursor-pointer' href='https://docs.google.com/forms/d/e/1FAIpQLSfl9aPobOWLW0q9onb5u6lZ_QrKcCS346Li5qmhv4adEOh93g/viewform' rel="noreferrer" target={'_blank'}>Register Now</a>
-                    </p>
+                    </div>
                 </div>
 
             </div>

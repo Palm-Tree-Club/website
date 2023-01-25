@@ -10,12 +10,9 @@ export default function App({ Component, pageProps }) {
     Aos.init({ duration: 500 });
   }, []);
 
-  if (typeof window !== "undefined") {
-    return (
-      <div suppressHydrationWarning className={`${openSans.variable} font-sans`}>
-        <Component {...pageProps} />
-      </div>
-    );
-  }
-  return <div className={`${openSans.variable} font-sans`}>Loading ...</div>;
+  return (
+    <div className={`${openSans.variable} font-sans`}>
+      <Component {...pageProps} />
+    </div>
+  );
 }

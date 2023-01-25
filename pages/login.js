@@ -43,15 +43,15 @@ export default function LoginPage() {
             <a onClick={() => {
               router.push('/');
             }} className="absolute left-2 text-white max-sm:mr-3 mr-10 cursor-pointer hover:text-sky-700 transition duration-300"><HiArrowNarrowLeft className="inline-block"/> Go Back</a>
-            <a className="max-sm:hidden text-cyan-50 text-2xl"><img className="inline-block cursor-pointer" loading="lazy" onClick={() => {
+            <a className="max-sm:hidden text-cyan-50 text-2xl"><img className="inline-block cursor-pointer" onClick={() => {
                 router.reload();
-            }} src="/Assets/Images/palm.png" height={50} width={50} alt="Palm Tree Club" /> | <img loading="lazy" onClick={() => { window.open('https://silveroakuni.ac.in', '_blank') }} src="/Assets/Images/sou.png" className="inline-block cursor-pointer" height={100} width={100} alt="silver oak university" /></a>
+            }} src="/Assets/Images/palm.png" height={50} width={50} alt="Palm Tree Club" /> | <img  onClick={() => { window.open('https://silveroakuni.ac.in', '_blank') }} src="/Assets/Images/sou.png" className="inline-block cursor-pointer" height={100} width={100} alt="silver oak university" /></a>
         </nav>
       <div className="bg-opacity flex flex-col h-screen w-screen justify-evenly items-center">
         <h1 className="text-white mt-16 text-4xl font-bold uppercase">
           Core Team Login
         </h1>
-        <img loading="lazy" src="/Assets/Images/palm.png" height={150} width={150} alt="Palm Tree Club"/>
+        <img src="/Assets/Images/palm.png" height={150} width={150} alt="Palm Tree Club"/>
         <ToastContainer className="z-40" />
         <div className="flex flex-col w-1/2">
           <label className="text-white text-xl font-bold">Email</label>

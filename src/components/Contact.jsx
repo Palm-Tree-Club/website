@@ -8,8 +8,8 @@ export default function Contact() {
             <div id='contact' style={{ height: 60 + 'vh' }} className="select-none max-sm:hidden font-sans w-screen p-20 bg-black grid grid-cols-4 gap-32 place-items-start">
                 <div className="flex flex-col justify-start">
                     <span className="text-white text-6xl">
-                        <img loading="lazy" className="inline-block" src="/Assets/Images/palm.png" height={100} width={100} alt="palm" />|
-                        <img loading="lazy" className="inline-block" src="/Assets/Images/sou.png" height={100} width={100} alt="sou" />
+                        <img className="inline-block" src="/Assets/Images/palm.png" height={100} width={100} alt="palm" />|
+                        <img className="inline-block" src="/Assets/Images/sou.png" height={100} width={100} alt="sou" />
                     </span>
                     <p className="text-white mt-10 ">Palm Tree Club, created & mentored by Silver Oak College Of Computer Application!</p>
                 </div>

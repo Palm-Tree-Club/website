@@ -32,6 +32,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <main
+        suppressHydrationWarning={true}
         style={{ minHeight: 100 + "vh" }}
         className="flex flex-col justify-center items-center overflow-hidden"
       >
