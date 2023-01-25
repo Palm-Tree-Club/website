@@ -65,6 +65,7 @@ export default function Dashboard() {
         </a>
         <a className="max-sm:hidden text-cyan-50 text-2xl">
           <img
+          loading="lazy"
             className="inline-block cursor-pointer"
             onClick={() => {
               router.reload();
@@ -76,6 +77,7 @@ export default function Dashboard() {
           />{" "}
           |{" "}
           <img
+          loading="lazy"
             onClick={() => {
               window.open("https://silveroakuni.ac.in", "_blank");
             }}
@@ -169,6 +171,7 @@ export default function Dashboard() {
       ) : (
         <div className="h-screen w-screen flex flex-col justify-evenly items-center">
           <img
+            loading="lazy"
             src="/Assets/Images/palm.png"
             height={200}
             width={200}

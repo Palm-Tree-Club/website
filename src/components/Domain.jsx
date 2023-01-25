@@ -27,7 +27,7 @@ export default function Domain() {
               className="h-40 w-full border-2 rounded-lg border-sky-700"
             >
               <div className="cursor-pointer flex flex-col justify-around items-center h-full hover:bg-sky-700 transition ease-in-out duration-300">
-                <img src={item.src} height={48} width={48} alt={item.name}/>
+                <img loading="lazy" src={item.src} height={48} width={48} alt={item.name}/>
                 <h1 className="text-2xl max-sm:text-xl uppercase font-semibold text-ambers">
                   {item.name}
                 </h1>

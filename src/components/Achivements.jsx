@@ -19,7 +19,7 @@ export default function Achievements() {
                 {data.map((item, index) => {
                     return (
                         <div key={index} className="hover:bg-pink-300 transition ease-in-out duration-300 flex flex-col justify-evenly items-center h-48 w-96 bg-white rounded-lg shadow-2xl max-sm:w-64">
-                            <img src={item.src} height={150} width={150} alt={item.name}/>
+                            <img loading="lazy" src={item.src} height={150} width={150} alt={item.name}/>
                             <a href={item.link} target={"_blank"} className="bg-ambers p-3 rounded-lg cursor-pointer" rel="noreferrer">Read more about {item.name}</a>
                         </div>
                     )
