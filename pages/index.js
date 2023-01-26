@@ -9,13 +9,16 @@ import { useEffect } from "react";
 import firebase from "../src/services/firebase";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import Faculty from "../src/components/Faculty";
+import Loading from "../src/components/Loading";
+import { Suspense } from "react";
+
 export default function Home() {
   useEffect(() => {
     const analytics = getAnalytics(firebase);
     logEvent(analytics, "page_view");  
   }, []);
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       <Head>
         <title>Palm Tree Club</title>
         <meta
@@ -45,6 +48,6 @@ export default function Home() {
       <footer style={{ overflow: "hidden" }}>
         <Contact />
       </footer>
-    </>
+    </Suspense>
   );
 }
