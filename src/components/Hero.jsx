@@ -5,7 +5,7 @@ export default function Hero() {
       id="hero"
       className="select-none grid h-screen bg-hero bg-cover w-screen max-sm:bg-center"
     >
-      <div className="bg-opacity flex h-screen w-screen flex-col justify-center items-center font-sans col-span-2">
+      <div className="backdrop-blur-sm bg-opacity flex h-screen w-screen flex-col justify-center items-center font-sans col-span-2">
         <a className="hidden mb-10 max-sm:inline-block text-cyan-50 text-2xl">
           <img
             className="inline-block cursor-pointer"
