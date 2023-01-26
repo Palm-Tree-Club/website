@@ -11,11 +11,12 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 import Faculty from "../src/components/Faculty";
 import Loading from "../src/components/Loading";
 import { Suspense } from "react";
+import { getPerformance } from "firebase/performance";
 
 export default function Home() {
   useEffect(() => {
-    const analytics = getAnalytics(firebase);
-    logEvent(analytics, "page_view");  
+    getAnalytics(firebase);
+    getPerformance(firebase);
   }, []);
   return (
     <Suspense fallback={<Loading />}>
