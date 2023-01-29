@@ -1,6 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRef } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import firebase from "../src/services/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,12 +16,20 @@ const loggedIn = () =>
     hideProgressBar: true,
     autoClose: 2000,
     type: "success",
+    style: {
+      zIndex: 9999,
+      top: "100px",
+    },
   });
 const InvalidCredentials = (error) =>
   toast(`Invalid Credentials!\n${error}`, {
     hideProgressBar: true,
     autoClose: 2000,
     type: "error",
+    style: {
+      zIndex: 9999,
+      top: "100px",
+    },
   });
 const auth = getAuth();
 
@@ -35,10 +47,28 @@ export default function LoginPage() {
         InvalidCredentials(error.message);
       });
   }
+  async function ResetPassword(email) {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast("Password Reset Email Sent!", {
+          hideProgressBar: true,
+          autoClose: 2000,
+          type: "success",
+          style: {
+            zIndex: 9999,
+            top: "100px",
+          },
+        });
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        InvalidCredentials(errorMessage);
+      });
+  }
   const emailRef = useRef();
   const passwordRef = useRef();
   return (
-    <div className=" h-screen w-screen bg-hero bg-cover max-sm:bg-center">
+    <div className="overflow-hidden h-screen w-screen bg-hero bg-cover max-sm:bg-center">
       <nav
         className={`fixed z-30 flex p-10 justify-center max-sm:justify-center items-center w-full h-20 bg-zinc-900 font-sans font-semibold text-lg max-sm:text-sm`}
       >
@@ -84,7 +114,7 @@ export default function LoginPage() {
           width={150}
           alt="Palm Tree Club"
         />
-        <ToastContainer className="z-40" />
+        <ToastContainer />
         <div className="flex flex-col w-1/2">
           <label className="text-white text-xl font-bold">Email</label>
           <input
@@ -105,6 +135,14 @@ export default function LoginPage() {
             className="mt-5 bg-black text-white rounded-md p-2 active:bg-white active:text-black tarnsition ease-in-out duration-300"
           >
             Login
+          </button>
+          <button
+            onClick={() => {
+              ResetPassword(emailRef.current.value);
+            }}
+            className="mt-5 bg-black text-white rounded-md p-2 active:bg-white active:text-black tarnsition ease-in-out duration-300"
+          >
+            Reset Password
           </button>
         </div>
       </div>

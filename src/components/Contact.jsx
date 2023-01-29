@@ -42,9 +42,9 @@ export default function Contact() {
                     </ul>
                 </div>
             </div>
-            <div className="select-none max-sm:p-10 flex flex-col font-sans bg-black w-screen justify-center items-center">
-                <p className="text-white mb-5 text-xl">Have a query? <a className="p-2 ml-4 bg-ambers rounded cursor-pointer" href="mailto:">Send Mail</a></p>
-                <p className="text-white text-center">© 2021 Palm Tree Club. All rights reserved.</p>
+            <div className="select-none max-sm:p-7 flex flex-col font-sans bg-black w-screen justify-center items-center">
+                <p className="text-white mb-5 text-xl">Have a query? <a className="p-2 ml-4 bg-ambers rounded cursor-pointer" href="mailto:palmtreeclub_socca@gmail.com">Send Mail</a></p>
+                <p className="text-white text-center">© 2021 Palm Tree Club. All rights reserved. Made by <a className="cursor-pointer transition-all hover:text-blue-400" href="https://meertarbani.dev" target={"_blank"} rel="noreferrer">Meer Tarbani</a></p>
             </div>
         </>
     )
