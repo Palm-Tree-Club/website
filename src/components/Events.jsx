@@ -27,7 +27,7 @@ export default function Events() {
                 ></div>}
                 <div className="flex flex-col justify-evenly h-full items-center">
                     <h1 className="text-3xl font-semibold uppercase text-bottle-text text-center">
-                        Profile Building Session - LinkedIn
+                        Make it live with Github
                     </h1>
                     <div className="text-xl text-bottle-text">
                         <p>
@@ -38,7 +38,7 @@ export default function Events() {
                                 width={30}
                                 src="https://img.icons8.com/color/48/null/calendar--v3.png"
                             />{" "}
-                            : 28<sup>th</sup> Jan
+                            : 16<sup>th</sup> Feb
                         </p>
                         <p>
                             <img
@@ -48,7 +48,7 @@ export default function Events() {
                                 className="inline-flex"
                                 src="https://img.icons8.com/fluency/48/null/time-span.png"
                             />{" "}
-                            : 11:00 am - 1:30 pm
+                            : 11:00 am - 2:00 pm
                         </p>
                         <p className="mb-10">
                             <img
@@ -58,11 +58,11 @@ export default function Events() {
                                 className="inline-flex"
                                 src="https://img.icons8.com/office/40/null/place-marker--v1.png"
                             />{" "}
-                            : CV Raman Hall - B Block
+                            : Newton Hall - D Block
                         </p>
                         <a
                             className="bg-amber-400 p-3 rounded-xl text-xl font-semibold active:bg-transparent transition-all duration-300 active:text-bottle-text active:scale-90 cursor-pointer"
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSfl9aPobOWLW0q9onb5u6lZ_QrKcCS346Li5qmhv4adEOh93g/viewform"
+                            href="https://gdsc.community.dev/events/details/developer-student-clubs-silver-oak-university-ahmedabad-presents-make-it-live-with-github/"
                             rel="noreferrer"
                             target={"_blank"}
                         >
