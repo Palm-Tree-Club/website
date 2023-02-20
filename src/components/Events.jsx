@@ -32,7 +32,7 @@ export default function Events() {
         <div className="flex mt-16 flex-col justify-evenly h-full items-center">
           <div className=" flex  flex-col justify-evenly h-full items-center text-xl text-bottle-text">
             <h1 className="text-3xl flex flex-wrap pl-7  font-semibold uppercase text-bottle-text text-center">
-              Graphic Designing Campaign
+            Graphic Designing Champaign
             </h1>
             <p>
               <img
@@ -70,7 +70,7 @@ export default function Events() {
               rel="noreferrer"
               target={"_blank"}
             >
-              Campaign Videos
+              Champaign Videos
             </a>
           </div>
         </div>
