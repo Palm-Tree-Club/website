@@ -66,7 +66,7 @@ export default function Events() {
                         </p> */}
             <a
               className="bg-amber-500 text-white hover:bg-yellow-600 p-3 rounded-xl text-xl font-semibold active:bg-transparent transition-all duration-300 active:text-bottle-text active:scale-90 cursor-pointer"
-              href="https://drive.google.com/drive/folders/1LJJIfejhIaHGcXIkFV25gyJZ1zDHAh8f?usp=sharing"
+              href="https://drive.google.com/drive/folders/1w0pHTyedPOZwJ92u2sgNRlZoxV_ozv3y"
               rel="noreferrer"
               target={"_blank"}
             >

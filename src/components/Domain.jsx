@@ -12,7 +12,7 @@ export default function Domain() {
       });
   }, []);
   return (
-    <div id="domain" className="select-none flex flex-col justify-center items-center h-screen bg-gradient-to-t from-slate-800 to-slate-900 w-screen">
+    <div id="domain" className="select-none  flex flex-col justify-center items-center h-screen bg-gradient-to-t from-slate-800 to-slate-900 w-screen">
       <div data-aos="fade-up" className="flex justify-center items-center">
         <h1 className="m-20 max-sm:text-4xl max-sm:m-10 max-sm:text-center font-semibold text-ambers text-6xl ">
           Find People Of Your Interest!
