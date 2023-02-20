@@ -3,7 +3,7 @@ export default function Faculty() {
   return (
     <div
       id="faculty"
-      className="select-none h-screen w-screen flex flex-col justify-center items-center bg-purple-800"
+      className="select-none h-screen w-screen flex flex-col justify-center items-center bg-gradient-to-b from-purple-500 to-purple-900"
     >
       <h1 data-aos="fade-up" className="max-sm:text-3xl text-center text-5xl text-white">
         Meet our Founders, Organizers & Leaders
