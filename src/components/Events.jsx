@@ -9,7 +9,7 @@ export default function Events() {
   return (
     <div
       id="events"
-      className="select-none flex flex-col justify-evenly items-center h-screen w-screen bg-bottle"
+      className="select-none flex flex-col justify-evenly items-center h-screen w-screen bg-gradient-to-b from-bottle to-green-900  "
     >
       <h1
         data-aos="fade-up"
@@ -65,7 +65,7 @@ export default function Events() {
                             : Newton Hall - D Block
                         </p> */}
             <a
-              className="bg-amber-400 hover:bg-yellow-600 p-3 rounded-xl text-xl font-semibold active:bg-transparent transition-all duration-300 active:text-bottle-text active:scale-90 cursor-pointer"
+              className="bg-amber-500 text-white hover:bg-yellow-600 p-3 rounded-xl text-xl font-semibold active:bg-transparent transition-all duration-300 active:text-bottle-text active:scale-90 cursor-pointer"
               href="https://drive.google.com/drive/folders/1LJJIfejhIaHGcXIkFV25gyJZ1zDHAh8f?usp=sharing"
               rel="noreferrer"
               target={"_blank"}

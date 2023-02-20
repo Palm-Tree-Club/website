@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
         <>
             <nav
-                className={`select-none fixed z-30 flex p-10 max-sm:p-2 justify-between max-sm:justify-between max-sm:h-16 items-center w-full h-20 bg-zinc-900 font-sans font-semibold text-lg max-sm:text-sm`}
+                className={`select-none fixed z-30 flex p-10 max-sm:p-2 justify-between max-sm:justify-between max-sm:h-16 items-center w-full h-20 bg-gradient-to-l from-zinc-900 shadow-2xl to-zinc-800 font-sans font-semibold text-lg max-sm:text-sm`}
             >
                 <a className="text-cyan-50 text-2xl">
                     <img
